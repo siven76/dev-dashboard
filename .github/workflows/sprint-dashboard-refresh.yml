@@ -1,0 +1,60 @@
+name: Refresh Sprint Dashboard Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch project items
+        env:
+          GH_TOKEN: ${{ secrets.MANA_SOFT_GH_TOKEN }}
+        run: |
+          node scripts/fetch-github-project-items.mjs mana-soft 1 docs/briefs/mana-soft-project-1-items.csv
+
+      - name: Build dashboard dataset
+        run: |
+          python3 scripts/build-sprint-dashboard-dataset.py \
+            --project-csv docs/briefs/mana-soft-project-1-items.csv \
+            --baseline-csv docs/briefs/data/sprint-baseline.csv \
+            --events-csv docs/briefs/data/sprint-scope-events.csv \
+            --output-json docs/briefs/data/sprint-dashboard-dataset.json \
+            --year 2026
+
+      - name: Refresh seed compatibility file
+        run: |
+          python3 - <<'PY'
+          import json
+          src='docs/briefs/data/sprint-dashboard-dataset.json'
+          dst='docs/briefs/mana-soft-project-1-dashboard-seed.json'
+          data=json.load(open(src))
+          json.dump(data["rows"], open(dst,'w'), ensure_ascii=False, indent=2)
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/briefs/mana-soft-project-1-items.csv docs/briefs/data/sprint-dashboard-dataset.json docs/briefs/mana-soft-project-1-dashboard-seed.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore(dashboard): refresh sprint data"
+          git push
