@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard objectif annuel sprint</title>
+  <style>
+    :root {
+      --bg-main: #f4f1e8;
+      --bg-card: #fffdf8;
+      --ink: #1f2b2a;
+      --muted: #5f6b69;
+      --brand: #0d766e;
+      --brand-soft: #d5efec;
+      --ok: #1f8b4c;
+      --warn: #d28b00;
+      --danger: #c13f25;
+      --line: #d7ddd9;
+      --shadow: 0 14px 32px rgba(31, 43, 42, 0.12);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+      background:
+        radial-gradient(circle at 7% 10%, #d8efe7 0, #d8efe700 28%),
+        radial-gradient(circle at 93% 16%, #f6dbc6 0, #f6dbc600 30%),
+        radial-gradient(circle at 90% 95%, #d5e9f6 0, #d5e9f600 34%),
+        var(--bg-main);
+      padding: 24px;
+    }
+
+    .shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      display: grid;
+      gap: 12px;
+      padding: 22px 24px;
+      background:
+        linear-gradient(122deg, #eaf8f6 0%, #fef6ef 48%, #eaf2fb 100%);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: "Rockwell", "Palatino Linotype", serif;
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      letter-spacing: 0.4px;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .objective {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .objective div {
+      border: 1px dashed rgba(13, 118, 110, 0.35);
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.66);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border-top: 1px solid var(--line);
+      background: #fcfaf5;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      transition: transform 0.14s ease, box-shadow 0.14s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--brand);
+      box-shadow: 0 6px 16px rgba(13, 118, 110, 0.28);
+    }
+
+    .btn-soft {
+      color: var(--brand);
+      background: var(--brand-soft);
+      border-color: #b9e3dd;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .kpi {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      display: grid;
+      gap: 8px;
+      background: #fff;
+      animation: reveal 0.5s ease both;
+    }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+
+    .kpi .value {
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .kpi .sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .value.ok {
+      color: var(--ok);
+    }
+
+    .value.warn {
+      color: var(--warn);
+    }
+
+    .value.danger {
+      color: var(--danger);
+    }
+
+    .section-title {
+      font-family: "Rockwell", "Palatino Linotype", serif;
+      margin: 0;
+      font-size: 1.1rem;
+      padding: 16px 18px 0;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      padding: 14px 18px 18px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 1320px;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #eef6f5;
+      z-index: 2;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #36504d;
+    }
+
+    td[data-kind="number"] input {
+      width: 78px;
+    }
+
+    input, select {
+      width: 100%;
+      border: 1px solid #cdd8d4;
+      border-radius: 8px;
+      background: #fff;
+      padding: 6px 8px;
+      font: inherit;
+      color: inherit;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #93d8cf;
+      outline-offset: 1px;
+      border-color: #7bc7bd;
+    }
+
+    .status-chip {
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-block;
+      border: 1px solid transparent;
+    }
+
+    .status-ok {
+      color: var(--ok);
+      background: #e8f7ef;
+      border-color: #b9e4cc;
+    }
+
+    .status-ko {
+      color: var(--danger);
+      background: #fdeee9;
+      border-color: #efc8bc;
+    }
+
+    .remove-btn {
+      color: #7f1a08;
+      background: #ffe8e1;
+      border: 1px solid #f3c3b5;
+      font-size: 0.78rem;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .summary {
+      padding: 0 18px 18px;
+    }
+
+    .summary table {
+      min-width: 720px;
+    }
+
+    .bar-zone {
+      padding: 0 18px 18px;
+    }
+
+    .bars {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      min-height: 220px;
+      padding: 12px;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(44px, 1fr);
+      gap: 8px;
+      align-items: end;
+      overflow-x: auto;
+    }
+
+    .bar-item {
+      display: grid;
+      justify-items: center;
+      gap: 6px;
+      min-width: 44px;
+    }
+
+    .bar {
+      width: 28px;
+      border-radius: 10px 10px 6px 6px;
+      transform-origin: bottom;
+      animation: grow 0.5s ease both;
+      transition: height 0.25s ease;
+    }
+
+    .bar.good {
+      background: linear-gradient(180deg, #20a35f 0%, #1a7e49 100%);
+    }
+
+    .bar.bad {
+      background: linear-gradient(180deg, #e0633c 0%, #ba3e1f 100%);
+    }
+
+    .bar-label {
+      font-size: 0.74rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .legend {
+      color: var(--muted);
+      font-size: 0.86rem;
+      padding: 0 18px 16px;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes grow {
+      from {
+        transform: scaleY(0.1);
+      }
+      to {
+        transform: scaleY(1);
+      }
+    }
+
+    @media (max-width: 840px) {
+      body {
+        padding: 14px;
+      }
+
+      .toolbar {
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="panel">
+      <div class="hero">
+        <h1>Dashboard - Execution fiable des sprints</h1>
+        <p>Objectif annuel : 100% des points engages atteints a chaque sprint avec une tolerance maximale de 2 sprints non termines par trimestre.</p>
+        <div class="objective">
+          <div><strong>S:</strong> Execution fiable et maitrisee des sprints.</div>
+          <div><strong>M:</strong> 100% des points engages atteints a chaque sprint.</div>
+          <div><strong>A:</strong> Cadrage fin, decoupage, arbitrage, priorisation, entraide.</div>
+          <div><strong>R/T:</strong> Responsable de l'engagement, mesure sprint par sprint, bilan trimestriel.</div>
+        </div>
+        <p>Source active: GitHub Project mana-soft/#1 (Backend Sprint), export reel des items avec iteration + dates de cloture. Engagement fiable = baseline figee + journal des changements de scope.</p>
+      </div>
+      <div class="toolbar">
+        <div>
+          <div id="asOfLabel">Mise a jour: -</div>
+          <div id="dataSourceLabel">Dataset: local</div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn-primary" id="addSprintBtn">Ajouter un sprint</button>
+          <button type="button" class="btn-soft" id="resetBtn">Reinitialiser donnees GitHub</button>
+          <button type="button" class="btn-soft" id="syncBtn">Synchroniser dataset partage</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">KPI de pilotage</h2>
+      <div class="kpis">
+        <article class="kpi">
+          <div class="label">Taux de points atteints (annuel)</div>
+          <div class="value" id="kpiAnnualRate">-</div>
+          <div class="sub" id="kpiAnnualSub">-</div>
+        </article>
+        <article class="kpi">
+          <div class="label">Sprints a 100%</div>
+          <div class="value" id="kpiReachedSprints">-</div>
+          <div class="sub" id="kpiReachedSub">-</div>
+        </article>
+        <article class="kpi">
+          <div class="label">Exceptions trimestre courant</div>
+          <div class="value" id="kpiCurrentQuarterExceptions">-</div>
+          <div class="sub" id="kpiCurrentQuarterSub">Seuil <= 2</div>
+        </article>
+        <article class="kpi">
+          <div class="label">Taux ajuste (annuel)</div>
+          <div class="value" id="kpiAdjustedRate">-</div>
+          <div class="sub" id="kpiAdjustedSub">Delivered / engagement ajuste</div>
+        </article>
+        <article class="kpi">
+          <div class="label">Churn moyen</div>
+          <div class="value" id="kpiChurn">-</div>
+          <div class="sub" id="kpiChurnSub">Variation de scope sur engagement initial</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Suivi sprint par sprint</h2>
+      <div class="table-wrap">
+        <table aria-label="Suivi sprint">
+          <thead>
+            <tr>
+              <th>Sprint</th>
+              <th>Trimestre</th>
+              <th>Debut</th>
+              <th>Fin</th>
+              <th>Pts engages</th>
+              <th>Pts realises</th>
+              <th>Issues planifiees</th>
+              <th>Issues non planifiees</th>
+              <th>+ Scope</th>
+              <th>- Scope</th>
+              <th>Reestim.</th>
+              <th>Churn %</th>
+              <th>% atteinte</th>
+              <th>% ajuste</th>
+              <th>Statut</th>
+              <th>Notes</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="sprintTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Bilan trimestriel</h2>
+      <div class="summary">
+        <table aria-label="Bilan trimestriel">
+          <thead>
+            <tr>
+              <th>Trimestre</th>
+              <th>Sprints</th>
+              <th>Points engages</th>
+              <th>Points realises</th>
+              <th>% atteinte</th>
+              <th>Non termines</th>
+              <th>Tolerance</th>
+            </tr>
+          </thead>
+          <tbody id="quarterSummaryBody"></tbody>
+        </table>
+      </div>
+      <h2 class="section-title">Tendance des sprints (% atteinte)</h2>
+      <div class="bar-zone">
+        <div class="bars" id="barChart"></div>
+      </div>
+      <div class="legend">Barre verte: sprint a 100% ou plus. Barre rouge: sprint non termine.</div>
+    </section>
+  </main>
+
+  <script>
+    const STORAGE_KEY = "annual-sprint-objective-dashboard-v3-baseline-model";
+    const DATASET_URL = "./data/sprint-dashboard-dataset.json";
+    const QUARTERS = ["Q1", "Q2", "Q3", "Q4"];
+    const CURRENT_QUARTER = getQuarterFromMonth(new Date().getMonth() + 1);
+
+    const seedData = [
+      {
+        id: "1",
+        sprint: "S01",
+        quarter: "Q1",
+        startDate: "2026-01-05",
+        endDate: "2026-01-11",
+        committed: 15,
+        delivered: 14,
+        framing: 4,
+        slicing: 4,
+        arbitration: 4,
+        prioritization: 4,
+        helping: 4,
+        notes: "Iteration - Nexus (Migration Symfony) | issues=15, done=14, estimated=0"
+      },
+      {
+        id: "2",
+        sprint: "S02",
+        quarter: "Q1",
+        startDate: "2026-01-12",
+        endDate: "2026-01-18",
+        committed: 41,
+        delivered: 16,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Alpha (Migration Symfony) | issues=21, done=16, estimated=1"
+      },
+      {
+        id: "3",
+        sprint: "S03",
+        quarter: "Q1",
+        startDate: "2026-01-19",
+        endDate: "2026-01-25",
+        committed: 18,
+        delivered: 15,
+        framing: 3,
+        slicing: 3,
+        arbitration: 3,
+        prioritization: 3,
+        helping: 3,
+        notes: "Iteration - Forge (Migration Symfony) | issues=18, done=15, estimated=0"
+      },
+      {
+        id: "4",
+        sprint: "S04",
+        quarter: "Q1",
+        startDate: "2026-01-26",
+        endDate: "2026-02-01",
+        committed: 59,
+        delivered: 54,
+        framing: 4,
+        slicing: 4,
+        arbitration: 4,
+        prioritization: 4,
+        helping: 4,
+        notes: "Iteration - Archetype | issues=23, done=18, estimated=6"
+      },
+      {
+        id: "5",
+        sprint: "S05",
+        quarter: "Q1",
+        startDate: "2026-02-02",
+        endDate: "2026-02-08",
+        committed: 63,
+        delivered: 44,
+        framing: 2,
+        slicing: 2,
+        arbitration: 2,
+        prioritization: 2,
+        helping: 2,
+        notes: "Iteration - Zenith | issues=18, done=13, estimated=7"
+      },
+      {
+        id: "6",
+        sprint: "S06",
+        quarter: "Q1",
+        startDate: "2026-02-09",
+        endDate: "2026-02-15",
+        committed: 34,
+        delivered: 28,
+        framing: 3,
+        slicing: 3,
+        arbitration: 3,
+        prioritization: 3,
+        helping: 3,
+        notes: "Iteration - Titan | issues=15, done=13, estimated=8"
+      },
+      {
+        id: "7",
+        sprint: "S07",
+        quarter: "Q1",
+        startDate: "2026-02-16",
+        endDate: "2026-02-22",
+        committed: 38,
+        delivered: 36,
+        framing: 4,
+        slicing: 4,
+        arbitration: 4,
+        prioritization: 4,
+        helping: 4,
+        notes: "Iteration - Epopee | issues=18, done=16, estimated=3"
+      },
+      {
+        id: "8",
+        sprint: "S08",
+        quarter: "Q1",
+        startDate: "2026-02-23",
+        endDate: "2026-03-01",
+        committed: 41,
+        delivered: 34,
+        framing: 3,
+        slicing: 3,
+        arbitration: 3,
+        prioritization: 3,
+        helping: 3,
+        notes: "Iteration - Graal | issues=23, done=18, estimated=5"
+      },
+      {
+        id: "9",
+        sprint: "S09",
+        quarter: "Q1",
+        startDate: "2026-03-02",
+        endDate: "2026-03-08",
+        committed: 60,
+        delivered: 3,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Aquillee | issues=19, done=3, estimated=8"
+      },
+      {
+        id: "10",
+        sprint: "S10",
+        quarter: "Q1",
+        startDate: "2026-03-09",
+        endDate: "2026-03-15",
+        committed: 30,
+        delivered: 0,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Bambou | issues=4, done=0, estimated=3"
+      },
+      {
+        id: "11",
+        sprint: "S11",
+        quarter: "Q1",
+        startDate: "2026-03-16",
+        endDate: "2026-03-22",
+        committed: 11,
+        delivered: 0,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Cedre | issues=3, done=0, estimated=2"
+      },
+      {
+        id: "12",
+        sprint: "S12",
+        quarter: "Q1",
+        startDate: "2026-03-23",
+        endDate: "2026-03-29",
+        committed: 22,
+        delivered: 0,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Dahlia | issues=7, done=0, estimated=4"
+      },
+      {
+        id: "13",
+        sprint: "S13",
+        quarter: "Q1",
+        startDate: "2026-03-30",
+        endDate: "2026-04-05",
+        committed: 31,
+        delivered: 0,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Eucalyptus | issues=5, done=0, estimated=3"
+      },
+      {
+        id: "14",
+        sprint: "S14",
+        quarter: "Q2",
+        startDate: "2026-04-06",
+        endDate: "2026-04-12",
+        committed: 10,
+        delivered: 0,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Fougere | issues=3, done=0, estimated=1"
+      },
+      {
+        id: "15",
+        sprint: "S15",
+        quarter: "Q2",
+        startDate: "2026-04-13",
+        endDate: "2026-04-19",
+        committed: 1,
+        delivered: 0,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Gingko | issues=1, done=0, estimated=0"
+      },
+      {
+        id: "16",
+        sprint: "S16",
+        quarter: "Q2",
+        startDate: "2026-06-01",
+        endDate: "2026-06-07",
+        committed: 13,
+        delivered: 0,
+        framing: 1,
+        slicing: 1,
+        arbitration: 1,
+        prioritization: 1,
+        helping: 1,
+        notes: "Iteration - Nenuphar | issues=1, done=0, estimated=1"
+      }
+    ];
+
+    let rows = loadRows();
+    let datasetMeta = null;
+
+    const sprintTableBody = document.getElementById("sprintTableBody");
+    const quarterSummaryBody = document.getElementById("quarterSummaryBody");
+    const barChart = document.getElementById("barChart");
+
+    const kpiAnnualRate = document.getElementById("kpiAnnualRate");
+    const kpiAnnualSub = document.getElementById("kpiAnnualSub");
+    const kpiReachedSprints = document.getElementById("kpiReachedSprints");
+    const kpiReachedSub = document.getElementById("kpiReachedSub");
+    const kpiCurrentQuarterExceptions = document.getElementById("kpiCurrentQuarterExceptions");
+    const kpiCurrentQuarterSub = document.getElementById("kpiCurrentQuarterSub");
+    const kpiAdjustedRate = document.getElementById("kpiAdjustedRate");
+    const kpiAdjustedSub = document.getElementById("kpiAdjustedSub");
+    const kpiChurn = document.getElementById("kpiChurn");
+    const kpiChurnSub = document.getElementById("kpiChurnSub");
+    const asOfLabel = document.getElementById("asOfLabel");
+    const dataSourceLabel = document.getElementById("dataSourceLabel");
+
+    document.getElementById("addSprintBtn").addEventListener("click", () => {
+      const next = getNextSprintLabel();
+      rows.push({
+        id: makeId(),
+        sprint: next,
+        quarter: CURRENT_QUARTER,
+        startDate: "",
+        endDate: "",
+        committed: 0,
+        delivered: 0,
+        plannedIssueCount: 0,
+        unplannedIssueCount: 0,
+        scopeAdded: 0,
+        scopeRemoved: 0,
+        reestimateDelta: 0,
+        churnPct: 0,
+        attainmentAdjusted: 0,
+        notes: ""
+      });
+      saveRows();
+      render();
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      const ok = window.confirm("Reinitialiser les donnees avec le dernier dataset partage ?");
+      if (!ok) {
+        return;
+      }
+      hydrateSharedDataset();
+    });
+
+    document.getElementById("syncBtn").addEventListener("click", () => {
+      hydrateSharedDataset();
+    });
+
+    function render() {
+      renderTable();
+      renderKpi();
+      renderQuarterSummary();
+      renderBars();
+      const generated = datasetMeta?.generatedAt ? formatIsoDateTime(datasetMeta.generatedAt) : "n/a";
+      const mode = datasetMeta?.baselineMode ? datasetMeta.baselineMode : "local";
+      const unknown = Number.isFinite(Number(datasetMeta?.unknownScopePoints))
+        ? Number(datasetMeta.unknownScopePoints).toFixed(1)
+        : "n/a";
+      asOfLabel.textContent = "Mise a jour locale: " + formatDateTime(new Date());
+      dataSourceLabel.textContent = "Dataset partage: " + generated + " | baseline=" + mode + " | unknown scope=" + unknown + " pts";
+    }
+
+    function renderTable() {
+      sprintTableBody.innerHTML = "";
+
+      rows.forEach((row) => {
+        const percent = getAchievementPercent(row);
+        const reached = isReached(row);
+        const tr = document.createElement("tr");
+
+        tr.appendChild(createCellTextInput(row, "sprint"));
+        tr.appendChild(createQuarterCell(row));
+        tr.appendChild(createCellDateInput(row, "startDate"));
+        tr.appendChild(createCellDateInput(row, "endDate"));
+        tr.appendChild(createCellNumberInput(row, "committed", 0, 999));
+        tr.appendChild(createCellNumberInput(row, "delivered", 0, 999));
+        tr.appendChild(createReadOnlyNumberCell(row.plannedIssueCount));
+        tr.appendChild(createReadOnlyNumberCell(row.unplannedIssueCount));
+        tr.appendChild(createReadOnlyNumberCell(row.scopeAdded));
+        tr.appendChild(createReadOnlyNumberCell(row.scopeRemoved));
+        tr.appendChild(createReadOnlyNumberCell(row.reestimateDelta));
+        tr.appendChild(createReadOnlyNumberCell(row.churnPct, "%"));
+
+        const percentTd = document.createElement("td");
+        percentTd.textContent = Number.isFinite(percent) ? percent.toFixed(1) + "%" : "-";
+        tr.appendChild(percentTd);
+
+        const adjustedPercentTd = document.createElement("td");
+        const adjustedPercent = getAdjustedAchievementPercent(row);
+        adjustedPercentTd.textContent = Number.isFinite(adjustedPercent)
+          ? adjustedPercent.toFixed(1) + "%"
+          : "-";
+        tr.appendChild(adjustedPercentTd);
+
+        const statusTd = document.createElement("td");
+        const chip = document.createElement("span");
+        chip.className = "status-chip " + (reached ? "status-ok" : "status-ko");
+        chip.textContent = reached ? "Atteint" : "Non termine";
+        statusTd.appendChild(chip);
+        tr.appendChild(statusTd);
+
+        tr.appendChild(createCellTextInput(row, "notes"));
+        tr.appendChild(createDeleteCell(row.id));
+        sprintTableBody.appendChild(tr);
+      });
+    }
+
+    function renderKpi() {
+      const totalCommitted = sum(rows.map((row) => toNumber(row.committed)));
+      const totalDelivered = sum(rows.map((row) => toNumber(row.delivered)));
+      const annualRate = totalCommitted > 0 ? (totalDelivered / totalCommitted) * 100 : 0;
+      const totalAdjustedCommitted = sum(rows.map((row) => getAdjustedCommitted(row)));
+      const adjustedAnnualRate = totalAdjustedCommitted > 0 ? (totalDelivered / totalAdjustedCommitted) * 100 : 0;
+
+      const reachedCount = rows.filter(isReached).length;
+      const quarterRows = rows.filter((row) => row.quarter === CURRENT_QUARTER);
+      const currentQuarterExceptions = quarterRows.filter((row) => !isReached(row)).length;
+
+      updateKpiValue(kpiAnnualRate, annualRate.toFixed(1) + "%", annualRate >= 100, annualRate >= 95);
+      kpiAnnualSub.textContent = totalDelivered + " / " + totalCommitted + " points realises";
+      updateKpiValue(
+        kpiAdjustedRate,
+        adjustedAnnualRate.toFixed(1) + "%",
+        adjustedAnnualRate >= 100,
+        adjustedAnnualRate >= 95
+      );
+      kpiAdjustedSub.textContent = totalDelivered.toFixed(1) + " / " + totalAdjustedCommitted.toFixed(1) + " points";
+
+      updateKpiValue(
+        kpiReachedSprints,
+        reachedCount + " / " + rows.length,
+        reachedCount === rows.length,
+        reachedCount >= Math.max(rows.length - 2, 0)
+      );
+      kpiReachedSub.textContent = "Objectif: " + rows.length + " sprints atteints";
+
+      updateKpiValue(
+        kpiCurrentQuarterExceptions,
+        currentQuarterExceptions + " / 2",
+        currentQuarterExceptions <= 1,
+        currentQuarterExceptions === 2
+      );
+      kpiCurrentQuarterSub.textContent = "Trimestre courant: " + CURRENT_QUARTER;
+
+      const churnValues = rows.map((row) => toNumber(row.churnPct));
+      const avgChurn = churnValues.length ? sum(churnValues) / churnValues.length : 0;
+      updateKpiValue(
+        kpiChurn,
+        avgChurn.toFixed(1) + "%",
+        avgChurn <= 15,
+        avgChurn <= 30
+      );
+      const unknownScopeTotal = sum(rows.map((row) => toNumber(row.unknownScopePoints)));
+      kpiChurnSub.textContent = "Unknown scope cumule: " + unknownScopeTotal.toFixed(1) + " pts";
+    }
+
+    function renderQuarterSummary() {
+      quarterSummaryBody.innerHTML = "";
+      QUARTERS.forEach((quarter) => {
+        const quarterRows = rows.filter((row) => row.quarter === quarter);
+        const pointsCommitted = sum(quarterRows.map((row) => toNumber(row.committed)));
+        const pointsDelivered = sum(quarterRows.map((row) => toNumber(row.delivered)));
+        const rate = pointsCommitted > 0 ? (pointsDelivered / pointsCommitted) * 100 : 0;
+        const nonCompleted = quarterRows.filter((row) => !isReached(row)).length;
+        const toleranceText = nonCompleted <= 2 ? "OK" : "Depassee";
+
+        const tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" + quarter + "</td>" +
+          "<td>" + quarterRows.length + "</td>" +
+          "<td>" + pointsCommitted + "</td>" +
+          "<td>" + pointsDelivered + "</td>" +
+          "<td>" + (quarterRows.length ? rate.toFixed(1) + "%" : "-") + "</td>" +
+          "<td>" + nonCompleted + "</td>" +
+          "<td><span class=\"status-chip " + (nonCompleted <= 2 ? "status-ok" : "status-ko") + "\">" + toleranceText + "</span></td>";
+        quarterSummaryBody.appendChild(tr);
+      });
+    }
+
+    function renderBars() {
+      barChart.innerHTML = "";
+      if (rows.length === 0) {
+        barChart.textContent = "Aucune donnee sprint.";
+        return;
+      }
+
+      rows.forEach((row) => {
+        const percent = getAchievementPercent(row);
+        const clamped = Math.max(4, Math.min(120, percent));
+        const barItem = document.createElement("div");
+        barItem.className = "bar-item";
+
+        const value = document.createElement("div");
+        value.className = "bar-label";
+        value.textContent = percent.toFixed(0) + "%";
+
+        const bar = document.createElement("div");
+        bar.className = "bar " + (percent >= 100 ? "good" : "bad");
+        bar.style.height = (clamped * 1.5) + "px";
+
+        const label = document.createElement("div");
+        label.className = "bar-label";
+        label.textContent = row.sprint || "-";
+
+        barItem.appendChild(value);
+        barItem.appendChild(bar);
+        barItem.appendChild(label);
+        barChart.appendChild(barItem);
+      });
+    }
+
+    function createQuarterCell(row) {
+      const td = document.createElement("td");
+      const select = document.createElement("select");
+      QUARTERS.forEach((quarter) => {
+        const option = document.createElement("option");
+        option.value = quarter;
+        option.textContent = quarter;
+        if (row.quarter === quarter) {
+          option.selected = true;
+        }
+        select.appendChild(option);
+      });
+      select.addEventListener("change", (event) => {
+        updateRow(row.id, "quarter", event.target.value);
+      });
+      td.appendChild(select);
+      return td;
+    }
+
+    function createCellTextInput(row, field) {
+      const td = document.createElement("td");
+      const input = document.createElement("input");
+      input.type = "text";
+      input.value = row[field] || "";
+      input.addEventListener("change", (event) => {
+        updateRow(row.id, field, event.target.value);
+      });
+      td.appendChild(input);
+      return td;
+    }
+
+    function createCellDateInput(row, field) {
+      const td = document.createElement("td");
+      const input = document.createElement("input");
+      input.type = "date";
+      input.value = row[field] || "";
+      input.addEventListener("change", (event) => {
+        updateRow(row.id, field, event.target.value);
+      });
+      td.appendChild(input);
+      return td;
+    }
+
+    function createCellNumberInput(row, field, min, max) {
+      const td = document.createElement("td");
+      td.dataset.kind = "number";
+      const input = document.createElement("input");
+      input.type = "number";
+      input.min = String(min);
+      input.max = String(max);
+      input.step = "1";
+      input.value = toNumber(row[field]);
+      input.addEventListener("change", (event) => {
+        const next = clamp(toNumber(event.target.value), min, max);
+        event.target.value = String(next);
+        updateRow(row.id, field, next);
+      });
+      td.appendChild(input);
+      return td;
+    }
+
+    function createReadOnlyNumberCell(value, suffix = "") {
+      const td = document.createElement("td");
+      const number = toNumber(value);
+      const rendered = Number.isInteger(number) ? String(number) : number.toFixed(1);
+      td.textContent = rendered + suffix;
+      return td;
+    }
+
+    function createDeleteCell(id) {
+      const td = document.createElement("td");
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "remove-btn";
+      btn.textContent = "Supprimer";
+      btn.addEventListener("click", () => {
+        rows = rows.filter((row) => row.id !== id);
+        saveRows();
+        render();
+      });
+      td.appendChild(btn);
+      return td;
+    }
+
+    function updateRow(id, field, value) {
+      rows = rows.map((row) => (row.id === id ? { ...row, [field]: value } : row));
+      saveRows();
+      render();
+    }
+
+    function loadRows() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          return cloneSeedData().map(normalizeRow);
+        }
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) && parsed.length > 0 ? parsed.map(normalizeRow) : cloneSeedData().map(normalizeRow);
+      } catch (error) {
+        console.error(error);
+        return cloneSeedData().map(normalizeRow);
+      }
+    }
+
+    function saveRows() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(rows));
+    }
+
+    function getAchievementPercent(row) {
+      const committed = toNumber(row.committed);
+      const delivered = toNumber(row.delivered);
+      if (committed <= 0) {
+        return 0;
+      }
+      return (delivered / committed) * 100;
+    }
+
+    function getAdjustedAchievementPercent(row) {
+      const adjustedCommitted = getAdjustedCommitted(row);
+      if (adjustedCommitted > 0) {
+        return (toNumber(row.delivered) / adjustedCommitted) * 100;
+      }
+      return toNumber(row.attainmentAdjusted);
+    }
+
+    function getAdjustedCommitted(row) {
+      const explicitAdjusted = toNumber(row.adjustedCommitted);
+      if (explicitAdjusted > 0) {
+        return explicitAdjusted;
+      }
+      return Math.max(
+        0,
+        toNumber(row.committed) + toNumber(row.scopeAdded) - toNumber(row.scopeRemoved) + toNumber(row.reestimateDelta)
+      );
+    }
+
+    function isReached(row) {
+      return toNumber(row.committed) > 0 && toNumber(row.delivered) >= toNumber(row.committed);
+    }
+
+    function updateKpiValue(node, valueText, isOk, isWarn) {
+      node.textContent = valueText;
+      node.classList.remove("ok", "warn", "danger");
+      if (isOk) {
+        node.classList.add("ok");
+      } else if (isWarn) {
+        node.classList.add("warn");
+      } else {
+        node.classList.add("danger");
+      }
+    }
+
+    function toNumber(value) {
+      const number = Number(value);
+      return Number.isFinite(number) ? number : 0;
+    }
+
+    function sum(values) {
+      return values.reduce((acc, value) => acc + value, 0);
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getNextSprintLabel() {
+      const maxFound = rows.reduce((max, row) => {
+        const match = String(row.sprint).match(/\d+/);
+        if (!match) {
+          return max;
+        }
+        return Math.max(max, Number(match[0]));
+      }, 0);
+      const next = String(maxFound + 1).padStart(2, "0");
+      return "S" + next;
+    }
+
+    function cloneSeedData() {
+      return JSON.parse(JSON.stringify(seedData));
+    }
+
+    function normalizeRow(row) {
+      return {
+        id: String(row.id ?? makeId()),
+        sprint: row.sprint ?? "",
+        quarter: row.quarter ?? CURRENT_QUARTER,
+        startDate: row.startDate ?? "",
+        endDate: row.endDate ?? "",
+        committed: toNumber(row.committed),
+        delivered: toNumber(row.delivered),
+        scopeAdded: toNumber(row.scopeAdded),
+        scopeRemoved: toNumber(row.scopeRemoved),
+        reestimateDelta: toNumber(row.reestimateDelta),
+        adjustedCommitted: toNumber(row.adjustedCommitted),
+        attainmentAdjusted: toNumber(row.attainmentAdjusted),
+        churnPct: toNumber(row.churnPct),
+        unplannedBugPoints: toNumber(row.unplannedBugPoints),
+        unknownScopePoints: toNumber(row.unknownScopePoints),
+        plannedIssueCount: toNumber(row.plannedIssueCount),
+        unplannedIssueCount: toNumber(row.unplannedIssueCount),
+        notes: row.notes ?? ""
+      };
+    }
+
+    async function hydrateSharedDataset() {
+      try {
+        const response = await fetch(DATASET_URL, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("HTTP " + response.status);
+        }
+        const payload = await response.json();
+        if (!payload || !Array.isArray(payload.rows)) {
+          throw new Error("Dataset malformed");
+        }
+        datasetMeta = payload.meta ?? null;
+        rows = payload.rows.map(normalizeRow);
+        saveRows();
+        render();
+      } catch (error) {
+        console.warn("Shared dataset unavailable:", error);
+        render();
+      }
+    }
+
+    function makeId() {
+      if (window.crypto && "randomUUID" in window.crypto) {
+        return window.crypto.randomUUID();
+      }
+      return "id-" + Date.now() + "-" + Math.floor(Math.random() * 1000000);
+    }
+
+    function getQuarterFromMonth(month) {
+      if (month <= 3) return "Q1";
+      if (month <= 6) return "Q2";
+      if (month <= 9) return "Q3";
+      return "Q4";
+    }
+
+    function formatDateTime(date) {
+      const dd = String(date.getDate()).padStart(2, "0");
+      const mm = String(date.getMonth() + 1).padStart(2, "0");
+      const yyyy = date.getFullYear();
+      const hh = String(date.getHours()).padStart(2, "0");
+      const min = String(date.getMinutes()).padStart(2, "0");
+      return dd + "/" + mm + "/" + yyyy + " " + hh + ":" + min;
+    }
+
+    function formatIsoDateTime(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) {
+        return String(value);
+      }
+      return formatDateTime(date);
+    }
+
+    render();
+    hydrateSharedDataset();
+  </script>
+</body>
+</html>
