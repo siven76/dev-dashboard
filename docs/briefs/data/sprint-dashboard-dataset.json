@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-09T06:04:18Z",
+    "generatedAt": "2026-03-09T07:53:02Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -282,17 +282,17 @@
       "quarter": "Q1",
       "startDate": "2026-03-16",
       "endDate": "2026-03-22",
-      "committed": 39.0,
+      "committed": 41.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 39.0,
+      "adjustedCommitted": 41.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 9,
+      "plannedIssueCount": 8,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -300,7 +300,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - C\u00e8dre | planned=9, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - C\u00e8dre | planned=8, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "12",
@@ -334,17 +334,17 @@
       "quarter": "Q1",
       "startDate": "2026-03-30",
       "endDate": "2026-04-05",
-      "committed": 31.0,
+      "committed": 36.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 31.0,
+      "adjustedCommitted": 36.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 5,
+      "plannedIssueCount": 6,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -352,7 +352,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Eucalyptus | planned=5, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Eucalyptus | planned=6, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "14",
