@@ -2806,3 +2806,5 @@ Backend Sprint,Issue,mana-soft/overtime,935,Module Heure,https://github.com/mana
 Backend Sprint,Issue,mana-soft/overtime,955,Anomalie : Affichage d'heure SuP ou Récup en couleur sur le Planning,https://github.com/mana-soft/overtime/issues/955,OPEN,Backlog,Iteration - Bambou,2026-03-09,7,2026-03-10T05:47:01Z,2026-03-10T05:47:01Z,,,,,
 Backend Sprint,Issue,mana-soft/event,744,Notification date de fin de contrat,https://github.com/mana-soft/event/issues/744,OPEN,Backlog,Iteration - Cèdre,2026-03-16,7,2026-03-10T07:59:44Z,2026-03-10T07:59:44Z,,,,,
 Backend Sprint,Issue,mana-soft/employee,1429,Partie II - Ajout des primes & édition,https://github.com/mana-soft/employee/issues/1429,OPEN,Backlog,,,,,,,,,Estimate,8
+Backend Sprint,Issue,mana-soft/overtime,958,Majoration pas prise en compte,https://github.com/mana-soft/overtime/issues/958,OPEN,Backlog,Iteration - Bambou,2026-03-09,7,2026-03-11T04:50:06Z,2026-03-11T04:50:06Z,,,,,
+Backend Sprint,Issue,mana-soft/planning,552,Visibilité planning malgré restriction,https://github.com/mana-soft/planning/issues/552,OPEN,Backlog,Iteration - Bambou,2026-03-09,7,2026-03-11T04:54:30Z,2026-03-11T04:54:30Z,,,,,
