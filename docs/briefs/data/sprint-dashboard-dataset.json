@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-20T10:45:01Z",
+    "generatedAt": "2026-03-20T11:36:55Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -308,17 +308,17 @@
       "quarter": "Q1",
       "startDate": "2026-03-23",
       "endDate": "2026-03-29",
-      "committed": 57.0,
+      "committed": 49.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 57.0,
+      "adjustedCommitted": 49.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 11,
+      "plannedIssueCount": 10,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -326,7 +326,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Dahlia | planned=11, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Dahlia | planned=10, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "13",
@@ -360,17 +360,17 @@
       "quarter": "Q2",
       "startDate": "2026-04-06",
       "endDate": "2026-04-12",
-      "committed": 41.0,
+      "committed": 49.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 41.0,
+      "adjustedCommitted": 49.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 13,
+      "plannedIssueCount": 14,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -378,7 +378,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Foug\u00e8re | planned=13, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Foug\u00e8re | planned=14, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "15",
