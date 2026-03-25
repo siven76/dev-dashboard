@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-25T04:59:47Z",
+    "generatedAt": "2026-03-25T06:10:10Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -310,23 +310,23 @@
       "endDate": "2026-03-29",
       "committed": 62.0,
       "delivered": 9.0,
-      "scopeAdded": 4.0,
+      "scopeAdded": 5.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 66.0,
-      "attainmentAdjusted": 13.64,
-      "churnPct": 6.45,
+      "adjustedCommitted": 67.0,
+      "attainmentAdjusted": 13.43,
+      "churnPct": 8.06,
       "unplannedBugPoints": 0.0,
-      "unplannedScopePoints": 4.0,
+      "unplannedScopePoints": 5.0,
       "plannedIssueCount": 11,
-      "unplannedIssueCount": 4,
+      "unplannedIssueCount": 5,
       "unknownScopePoints": 0,
       "framing": 1,
       "slicing": 1,
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Dahlia | planned=11, unplanned=4, delivered_planned=2, unknown_scope_points=0"
+      "notes": "Iteration - Dahlia | planned=11, unplanned=5, delivered_planned=2, unknown_scope_points=0"
     },
     {
       "id": "13",
