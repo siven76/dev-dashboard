@@ -2552,7 +2552,7 @@ Module suivants seulement : ABS, PLG, EVT, DOC
 EXP, ITW, PRS, OVT sont bloqués
 Pas d'IA/OCR/Valeur probante
 Pas de support téléphonique",https://github.com/mana-soft/settings/issues/246,CLOSED,Done,Iteration 55 - Cérès,2025-10-20,7,2025-10-23T12:35:42Z,2025-10-23T12:35:42Z,2025-10-24T12:28:49Z,,,,
-Backend Sprint,Issue,mana-soft/absence,1292,La récurrence : en mode Multiple,https://github.com/mana-soft/absence/issues/1292,OPEN,Backlog,Iteration - Fougère,2026-04-06,7,2026-04-01T10:04:59Z,2026-04-01T10:04:59Z,,,,Estimate,21
+Backend Sprint,Issue,mana-soft/absence,1292,La récurrence : en mode Multiple,https://github.com/mana-soft/absence/issues/1292,OPEN,Backlog,Iteration - Hélianthe,2026-04-20,7,2026-04-01T10:04:59Z,2026-04-02T08:06:33Z,,,,Estimate,21
 Backend Sprint,Issue,mana-soft/absence,1294,Mauvais décompte CP,https://github.com/mana-soft/absence/issues/1294,CLOSED,Done,Iteration 56 - Hauméa,2025-10-27,7,2025-10-24T06:50:45Z,2025-10-27T04:52:48Z,2025-10-27T05:36:46Z,,,,
 Backend Sprint,Issue,mana-soft/presence,1097,"Nouvel interface si réglage ""Planification"" cochée : création d'un nouvel onglet ""Planification"" avec la possibilité d'autoriser les utilisateurs par service",https://github.com/mana-soft/presence/issues/1097,CLOSED,Done,,,,,,2026-02-20T10:10:26Z,,,,
 Backend Sprint,Issue,mana-soft/document,818,Error: Call to a member function getCompany() on null,https://github.com/mana-soft/document/issues/818,CLOSED,Done,Iteration 56 - Hauméa,2025-10-27,7,2025-10-28T09:27:41Z,2025-10-28T09:27:41Z,2025-10-28T12:51:15Z,,,,
