@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-13T03:27:50Z",
+    "generatedAt": "2026-04-13T06:20:34Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -388,23 +388,23 @@
       "endDate": "2026-04-19",
       "committed": 47.0,
       "delivered": 0.0,
-      "scopeAdded": 0.0,
+      "scopeAdded": 1.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 47.0,
+      "adjustedCommitted": 48.0,
       "attainmentAdjusted": 0.0,
-      "churnPct": 0.0,
+      "churnPct": 2.13,
       "unplannedBugPoints": 0.0,
-      "unplannedScopePoints": 0,
+      "unplannedScopePoints": 1.0,
       "plannedIssueCount": 5,
-      "unplannedIssueCount": 0,
+      "unplannedIssueCount": 1,
       "unknownScopePoints": 0,
       "framing": 1,
       "slicing": 1,
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Gingko | planned=5, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Gingko | planned=5, unplanned=1, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "16",
