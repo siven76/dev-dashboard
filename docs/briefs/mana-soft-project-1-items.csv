@@ -2395,7 +2395,7 @@ Backend Sprint,PullRequest,mana-soft/planning,460,#384 - Refonte Planning Part 4
 Backend Sprint,PullRequest,mana-soft/planning,467,#384 - Refonte Planning Part 5,https://github.com/mana-soft/planning/pull/467,MERGED,Done,,,,,,2025-09-16T11:13:15Z,,,,
 Backend Sprint,Issue,mana-soft/overtime,798,Bug OVT - Warning date lors de la modification d'une heure sup,https://github.com/mana-soft/overtime/issues/798,CLOSED,Done,Iteration 49 - Mars,2025-09-08,7,2025-09-05T10:26:47Z,2025-09-05T10:26:47Z,2025-09-05T15:29:49Z,,,,
 Backend Sprint,PullRequest,mana-soft/expense,2126,Feat/deploy vehicle filter on production,https://github.com/mana-soft/expense/pull/2126,MERGED,Done,,,,,,2025-09-05T15:28:49Z,,,,
-Backend Sprint,Issue,mana-soft/presence,1204,Étape 11 : toasts messages,https://github.com/mana-soft/presence/issues/1204,OPEN,Backlog,,,,,,,,,,
+Backend Sprint,Issue,mana-soft/presence,1204,Étape 11 : toasts messages,https://github.com/mana-soft/presence/issues/1204,OPEN,Backlog,Iteration - Jasmin,2026-05-04,7,2026-04-15T09:42:41Z,2026-04-15T09:42:41Z,,,,,
 Backend Sprint,Issue,mana-soft/presence,1205,Étape 12 : duplications non réalisées,https://github.com/mana-soft/presence/issues/1205,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/presence,1206,Étape 13 : publier en masse,https://github.com/mana-soft/presence/issues/1206,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/presence,1209,Étape 16 : historique,https://github.com/mana-soft/presence/issues/1209,OPEN,Backlog,,,,,,,,,,
@@ -2894,3 +2894,5 @@ Backend Sprint,Issue,mana-soft/administrator,1285,Error for date-time formatting
 Backend Sprint,Issue,mana-soft/expense,2306,Anomalie : Pictogramme apparait,https://github.com/mana-soft/expense/issues/2306,OPEN,In Progress,Iteration - Gingko,2026-04-13,7,2026-04-14T10:24:28Z,2026-04-14T10:24:28Z,,,,,
 Backend Sprint,Issue,mana-soft/core-bundle,670,Supprimer Mindee de NDF et DOC,https://github.com/mana-soft/core-bundle/issues/670,OPEN,Backlog,Iteration - Hélianthe,2026-04-20,7,2026-04-14T10:48:59Z,2026-04-14T10:49:03Z,,,,Estimate,5
 Backend Sprint,Issue,mana-soft/document,909,Anomalie : lors du traitement d'une demande,https://github.com/mana-soft/document/issues/909,OPEN,Backlog,Iteration - Gingko,2026-04-13,7,2026-04-15T07:42:04Z,2026-04-15T07:42:04Z,,,,,
+Backend Sprint,Issue,mana-soft/employee,1590,Enrichissement de l’export utilisateurs avec les données contrat et rémunération,https://github.com/mana-soft/employee/issues/1590,OPEN,Backlog,Iteration - Hélianthe,2026-04-20,7,2026-04-15T09:19:12Z,2026-04-15T09:19:12Z,,,,Estimate,1
+Backend Sprint,Issue,mana-soft/presence,1203,"Étape 10 : colonne semaine et boutons ""Dupliquer"" & ""Supprimer""",https://github.com/mana-soft/presence/issues/1203,OPEN,Backlog,Iteration - Iris,2026-04-27,7,2026-04-15T09:40:16Z,2026-04-15T09:40:16Z,,,,,
