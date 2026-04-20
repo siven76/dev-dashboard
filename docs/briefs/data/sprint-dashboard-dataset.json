@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-20T06:21:09Z",
+    "generatedAt": "2026-04-20T09:10:35Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -438,17 +438,17 @@
       "quarter": "Q2",
       "startDate": "2026-04-27",
       "endDate": "2026-05-03",
-      "committed": 50.0,
+      "committed": 38.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 50.0,
+      "adjustedCommitted": 38.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 8,
+      "plannedIssueCount": 6,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -456,7 +456,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Iris | planned=8, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Iris | planned=6, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "18",
@@ -464,17 +464,17 @@
       "quarter": "Q2",
       "startDate": "2026-05-04",
       "endDate": "2026-05-10",
-      "committed": 48.0,
+      "committed": 60.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 48.0,
+      "adjustedCommitted": 60.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 7,
+      "plannedIssueCount": 9,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -482,7 +482,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Jasmin | planned=7, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Jasmin | planned=9, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "19",
@@ -516,17 +516,17 @@
       "quarter": "Q2",
       "startDate": "2026-05-18",
       "endDate": "2026-05-24",
-      "committed": 10.0,
+      "committed": 18.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 10.0,
+      "adjustedCommitted": 18.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 4,
+      "plannedIssueCount": 5,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -534,7 +534,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Lotus | planned=4, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Lotus | planned=5, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "21",
@@ -568,17 +568,17 @@
       "quarter": "Q2",
       "startDate": "2026-06-01",
       "endDate": "2026-06-07",
-      "committed": 43.0,
+      "committed": 34.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 43.0,
+      "adjustedCommitted": 34.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 5,
+      "plannedIssueCount": 3,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -586,7 +586,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - N\u00e9nuphar | planned=5, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - N\u00e9nuphar | planned=3, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     }
   ]
 }
