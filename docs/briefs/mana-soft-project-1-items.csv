@@ -2425,7 +2425,7 @@ Backend Sprint,Issue,mana-soft/expense,2127,"NDF - Mise à jour du bouton ""Tél
 Backend Sprint,Issue,mana-soft/presence,1210,Étape 4 : interactions sur un utilisateur,https://github.com/mana-soft/presence/issues/1210,CLOSED,Done,Iteration 50 - Jupiter,2025-09-15,7,2025-09-05T13:28:59Z,2025-09-15T13:01:02Z,2025-09-25T12:17:24Z,,,,
 Backend Sprint,Issue,mana-soft/interview,1479,Selinium test,https://github.com/mana-soft/interview/issues/1479,CLOSED,Done,Iteration 50 - Jupiter,2025-09-15,7,2025-08-15T04:30:45Z,2025-09-08T05:02:45Z,2025-09-15T11:03:53Z,,,,
 Backend Sprint,PullRequest,mana-soft/planning,471,#470 - Fix half blocks for not worked/rest days - planning,https://github.com/mana-soft/planning/pull/471,MERGED,Done,,,,,,2025-09-10T10:42:43Z,,,,
-Backend Sprint,Issue,mana-soft/settings,222,Tableau de bord général,https://github.com/mana-soft/settings/issues/222,OPEN,Backlog,,,,,,,,,,
+Backend Sprint,Issue,mana-soft/settings,222,Tableau de bord général (Baptiste),https://github.com/mana-soft/settings/issues/222,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/settings,223,Etape 1 - Données du module ABS,https://github.com/mana-soft/settings/issues/223,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/settings,224,Etape 2 - Données du module OVT,https://github.com/mana-soft/settings/issues/224,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/settings,225,Etape 3 - Données du module NDF,https://github.com/mana-soft/settings/issues/225,OPEN,Backlog,,,,,,,,,,
