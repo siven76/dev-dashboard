@@ -551,17 +551,17 @@
     "quarter": "Q2",
     "startDate": "2026-06-01",
     "endDate": "2026-06-07",
-    "committed": 29.0,
+    "committed": 37.0,
     "delivered": 0.0,
     "scopeAdded": 0.0,
     "scopeRemoved": 0.0,
     "reestimateDelta": 0.0,
-    "adjustedCommitted": 29.0,
+    "adjustedCommitted": 37.0,
     "attainmentAdjusted": 0.0,
     "churnPct": 0.0,
     "unplannedBugPoints": 0.0,
     "unplannedScopePoints": 0,
-    "plannedIssueCount": 2,
+    "plannedIssueCount": 3,
     "unplannedIssueCount": 0,
     "unknownScopePoints": 0,
     "framing": 1,
@@ -569,6 +569,6 @@
     "arbitration": 1,
     "prioritization": 1,
     "helping": 1,
-    "notes": "Iteration - Nénuphar | planned=2, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+    "notes": "Iteration - Nénuphar | planned=3, unplanned=0, delivered_planned=0, unknown_scope_points=0"
   }
 ]
