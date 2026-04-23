@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-23T12:02:03Z",
+    "generatedAt": "2026-04-23T15:17:16Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -413,12 +413,12 @@
       "startDate": "2026-04-20",
       "endDate": "2026-04-26",
       "committed": 46.0,
-      "delivered": 0.0,
+      "delivered": 6.0,
       "scopeAdded": 7.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
       "adjustedCommitted": 53.0,
-      "attainmentAdjusted": 0.0,
+      "attainmentAdjusted": 11.32,
       "churnPct": 15.22,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 7.0,
@@ -430,7 +430,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - H\u00e9lianthe | planned=8, unplanned=7, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - H\u00e9lianthe | planned=8, unplanned=7, delivered_planned=2, unknown_scope_points=0"
     },
     {
       "id": "17",
