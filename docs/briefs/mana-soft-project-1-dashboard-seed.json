@@ -396,12 +396,12 @@
     "startDate": "2026-04-20",
     "endDate": "2026-04-26",
     "committed": 47.0,
-    "delivered": 6.0,
+    "delivered": 7.0,
     "scopeAdded": 9.0,
     "scopeRemoved": 0.0,
     "reestimateDelta": 0.0,
     "adjustedCommitted": 56.0,
-    "attainmentAdjusted": 10.71,
+    "attainmentAdjusted": 12.5,
     "churnPct": 19.15,
     "unplannedBugPoints": 0.0,
     "unplannedScopePoints": 9.0,
@@ -413,7 +413,7 @@
     "arbitration": 1,
     "prioritization": 1,
     "helping": 1,
-    "notes": "Iteration - Hélianthe | planned=9, unplanned=9, delivered_planned=2, unknown_scope_points=0"
+    "notes": "Iteration - Hélianthe | planned=9, unplanned=9, delivered_planned=3, unknown_scope_points=0"
   },
   {
     "id": "17",
