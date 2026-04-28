@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-28T07:34:10Z",
+    "generatedAt": "2026-04-28T10:21:35Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -464,12 +464,12 @@
       "quarter": "Q2",
       "startDate": "2026-05-04",
       "endDate": "2026-05-10",
-      "committed": 27.0,
+      "committed": 34.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 27.0,
+      "adjustedCommitted": 34.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
