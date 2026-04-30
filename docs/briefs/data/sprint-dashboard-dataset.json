@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-30T04:35:32Z",
+    "generatedAt": "2026-04-30T07:30:56Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -516,17 +516,17 @@
       "quarter": "Q2",
       "startDate": "2026-05-18",
       "endDate": "2026-05-24",
-      "committed": 30.0,
+      "committed": 22.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 30.0,
+      "adjustedCommitted": 22.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 6,
+      "plannedIssueCount": 5,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -534,7 +534,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Lotus | planned=6, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Lotus | planned=5, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "21",
@@ -542,17 +542,17 @@
       "quarter": "Q2",
       "startDate": "2026-05-25",
       "endDate": "2026-05-31",
-      "committed": 16.0,
+      "committed": 24.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 16.0,
+      "adjustedCommitted": 24.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 2,
+      "plannedIssueCount": 3,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -560,7 +560,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Mimosa | planned=2, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Mimosa | planned=3, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "22",
