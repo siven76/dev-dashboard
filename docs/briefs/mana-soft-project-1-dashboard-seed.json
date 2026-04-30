@@ -422,12 +422,12 @@
     "startDate": "2026-04-27",
     "endDate": "2026-05-03",
     "committed": 56.0,
-    "delivered": 1.0,
+    "delivered": 15.0,
     "scopeAdded": 10.0,
     "scopeRemoved": 0.0,
     "reestimateDelta": 0.0,
     "adjustedCommitted": 66.0,
-    "attainmentAdjusted": 1.52,
+    "attainmentAdjusted": 22.73,
     "churnPct": 17.86,
     "unplannedBugPoints": 0.0,
     "unplannedScopePoints": 10.0,
@@ -439,7 +439,7 @@
     "arbitration": 1,
     "prioritization": 1,
     "helping": 1,
-    "notes": "Iteration - Iris | planned=9, unplanned=10, delivered_planned=1, unknown_scope_points=0"
+    "notes": "Iteration - Iris | planned=9, unplanned=10, delivered_planned=3, unknown_scope_points=0"
   },
   {
     "id": "18",
