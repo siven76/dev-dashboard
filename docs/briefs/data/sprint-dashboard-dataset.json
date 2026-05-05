@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-05T03:41:55Z",
+    "generatedAt": "2026-05-05T06:22:07Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -464,17 +464,17 @@
       "quarter": "Q2",
       "startDate": "2026-05-04",
       "endDate": "2026-05-10",
-      "committed": 44.0,
+      "committed": 45.0,
       "delivered": 0.0,
       "scopeAdded": 5.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 49.0,
+      "adjustedCommitted": 50.0,
       "attainmentAdjusted": 0.0,
-      "churnPct": 11.36,
+      "churnPct": 11.11,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 5.0,
-      "plannedIssueCount": 5,
+      "plannedIssueCount": 6,
       "unplannedIssueCount": 5,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -482,7 +482,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Jasmin | planned=5, unplanned=5, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Jasmin | planned=6, unplanned=5, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "19",
@@ -490,17 +490,17 @@
       "quarter": "Q2",
       "startDate": "2026-05-11",
       "endDate": "2026-05-17",
-      "committed": 33.0,
+      "committed": 32.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 33.0,
+      "adjustedCommitted": 32.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 5,
+      "plannedIssueCount": 4,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -508,7 +508,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Kapok | planned=5, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Kapok | planned=4, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "20",
