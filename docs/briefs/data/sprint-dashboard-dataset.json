@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-13T13:20:36Z",
+    "generatedAt": "2026-05-13T16:24:42Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -516,17 +516,17 @@
       "quarter": "Q2",
       "startDate": "2026-05-18",
       "endDate": "2026-05-24",
-      "committed": 46.0,
+      "committed": 47.0,
       "delivered": 0.0,
       "scopeAdded": 0.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 46.0,
+      "adjustedCommitted": 47.0,
       "attainmentAdjusted": 0.0,
       "churnPct": 0.0,
       "unplannedBugPoints": 0.0,
       "unplannedScopePoints": 0,
-      "plannedIssueCount": 8,
+      "plannedIssueCount": 9,
       "unplannedIssueCount": 0,
       "unknownScopePoints": 0,
       "framing": 1,
@@ -534,7 +534,7 @@
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - Lotus | planned=8, unplanned=0, delivered_planned=0, unknown_scope_points=0"
+      "notes": "Iteration - Lotus | planned=9, unplanned=0, delivered_planned=0, unknown_scope_points=0"
     },
     {
       "id": "21",
