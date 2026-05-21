@@ -10,7 +10,7 @@ Backend Sprint,Issue,mana-soft/core-bundle,670,Supprimer Mindee de NDF et DOC ,h
 Backend Sprint,Issue,mana-soft/planning,391,Ajout de filtre en favoris sur le Planning,https://github.com/mana-soft/planning/issues/391,CLOSED,Done,Iteration - Hélianthe,2026-04-20,7,2025-11-26T10:20:18Z,2026-04-07T13:18:30Z,2026-05-18T13:33:12Z,,,Estimate,8
 Backend Sprint,Issue,mana-soft/employee,1590,Enrichissement de l’export utilisateurs avec les données contrat et rémunération,https://github.com/mana-soft/employee/issues/1590,CLOSED,Done,Iteration - Hélianthe,2026-04-20,7,2026-04-15T09:19:12Z,2026-04-15T09:19:12Z,2026-04-23T13:34:44Z,,,Estimate,1
 Backend Sprint,Issue,mana-soft/employee,1307,"Mise à jour de la partie ""Contrat - Historique""",https://github.com/mana-soft/employee/issues/1307,OPEN,In Progress,Iteration - Gingko,2026-04-13,7,2026-03-05T07:11:30Z,2026-04-07T13:19:36Z,,,,Estimate,8
-Backend Sprint,Issue,mana-soft/planning,582,Vacances scolaires : affichage planning et configuration,https://github.com/mana-soft/planning/issues/582,OPEN,In Progress,Iteration - Iris,2026-04-27,7,2026-04-16T11:14:00Z,2026-04-20T07:47:57Z,,,,Estimate,13
+Backend Sprint,Issue,mana-soft/planning,582,Vacances scolaires : affichage planning et configuration,https://github.com/mana-soft/planning/issues/582,CLOSED,Done,Iteration - Iris,2026-04-27,7,2026-04-16T11:14:00Z,2026-04-20T07:47:57Z,2026-05-21T05:17:13Z,,,Estimate,13
 Backend Sprint,Issue,mana-soft/employee,1462,E-mail de bienvenue,https://github.com/mana-soft/employee/issues/1462,CLOSED,Done,Iteration - Kapok,2026-05-11,7,2025-11-14T10:46:45Z,2026-04-30T05:14:51Z,2026-05-20T19:58:37Z,,,Estimate,8
 Backend Sprint,Issue,mana-soft/core-bundle,641,Heure,https://github.com/mana-soft/core-bundle/issues/641,OPEN,In Progress,Iteration - Fougère,2026-04-06,7,2026-03-18T12:59:04Z,2026-04-09T06:24:24Z,,,,Estimate,3
 Backend Sprint,Issue,mana-soft/core-bundle,504,Mise à jour des autorisations du module ABSENCE,https://github.com/mana-soft/core-bundle/issues/504,OPEN,Backlog,,,,,,,,,Estimate,2
@@ -615,7 +615,7 @@ Backend Sprint,Issue,mana-soft/employee,1511,Etape N - Statistiques sur une fonc
 Backend Sprint,Issue,mana-soft/employee,1512,Etape 7 - Tableau de bord,https://github.com/mana-soft/employee/issues/1512,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/employee,1514,Etape 4 - Recherche & Banque de CV,https://github.com/mana-soft/employee/issues/1514,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/asset,22,Etape 8 - Véhicules,https://github.com/mana-soft/asset/issues/22,OPEN,Backlog,,,,,,,,,,
-Backend Sprint,Issue,mana-soft/assistant,109,PII not being properly redacted,https://github.com/mana-soft/assistant/issues/109,OPEN,In Progress,,,,,,,,,,
+Backend Sprint,Issue,mana-soft/assistant,109,PII not being properly redacted,https://github.com/mana-soft/assistant/issues/109,CLOSED,Done,,,,,,2026-05-21T04:46:35Z,,,,
 Backend Sprint,PullRequest,mana-soft/planning,494,Fix absence period calculation using user timetable and eliminate code duplication,https://github.com/mana-soft/planning/pull/494,MERGED,Done,,,,,,2025-10-15T11:12:21Z,,,,
 Backend Sprint,PullRequest,mana-soft/settings,241,Feat/subscribe questionnaire v2 - part 1,https://github.com/mana-soft/settings/pull/241,MERGED,Done,,,,,,2025-10-16T14:41:13Z,,,,
 Backend Sprint,Issue,mana-soft/employee,1515,Etape 5 - Cooptation,https://github.com/mana-soft/employee/issues/1515,OPEN,Backlog,,,,,,,,,,
@@ -730,3 +730,9 @@ Backend Sprint,Issue,mana-soft/planning,618,- Présences,https://github.com/mana
 Backend Sprint,Issue,mana-soft/planning,619,- NDF,https://github.com/mana-soft/planning/issues/619,OPEN,Backlog,Iteration - Mimosa,2026-05-25,7,2026-05-20T05:08:14Z,2026-05-20T05:08:14Z,,,,,
 Backend Sprint,Issue,mana-soft/planning,620,- Évènements,https://github.com/mana-soft/planning/issues/620,OPEN,Backlog,Iteration - Mimosa,2026-05-25,7,2026-05-20T05:08:43Z,2026-05-20T05:08:43Z,,,,,
 Backend Sprint,Issue,mana-soft/planning,621,- Entretien,https://github.com/mana-soft/planning/issues/621,OPEN,Backlog,Iteration - Mimosa,2026-05-25,7,2026-05-20T05:09:19Z,2026-05-20T05:09:19Z,,,,,
+Backend Sprint,Issue,mana-soft/employee,1613,Anomalie : Annuaire > Contact d'urgence,https://github.com/mana-soft/employee/issues/1613,OPEN,In Progress,Iteration - Lotus,2026-05-18,7,2026-05-21T05:43:51Z,2026-05-21T05:43:51Z,,,,,
+Backend Sprint,Issue,mana-soft/assistant,194,Architecture AWS Bedrock,https://github.com/mana-soft/assistant/issues/194,OPEN,Done,Iteration - Lotus,2026-05-18,7,2026-05-21T06:05:50Z,2026-05-21T06:05:50Z,,,,,
+Backend Sprint,Issue,mana-soft/assistant,193,MaIA sur AWS Bedrock,https://github.com/mana-soft/assistant/issues/193,OPEN,In Progress,,,,,,,,,,
+Backend Sprint,Issue,mana-soft/assistant,196,Spécifications Symfony/React,https://github.com/mana-soft/assistant/issues/196,OPEN,Backlog,,,,,,,,,,
+Backend Sprint,Issue,mana-soft/assistant,195,Spécifications de la base de connaissances,https://github.com/mana-soft/assistant/issues/195,OPEN,Backlog,,,,,,,,,,
+Backend Sprint,Issue,mana-soft/assistant,197,Spécifications de la génération de fichiers,https://github.com/mana-soft/assistant/issues/197,OPEN,Backlog,,,,,,,,,,
