@@ -730,7 +730,7 @@ Backend Sprint,Issue,mana-soft/planning,618,- Présences,https://github.com/mana
 Backend Sprint,Issue,mana-soft/planning,619,- NDF,https://github.com/mana-soft/planning/issues/619,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/planning,620,- Évènements,https://github.com/mana-soft/planning/issues/620,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/planning,621,- Entretien,https://github.com/mana-soft/planning/issues/621,OPEN,Backlog,,,,,,,,,,
-Backend Sprint,Issue,mana-soft/employee,1613,Anomalie : Annuaire > Contact d'urgence,https://github.com/mana-soft/employee/issues/1613,OPEN,In Progress,Iteration - Lotus,2026-05-18,7,2026-05-21T05:43:51Z,2026-05-21T05:43:51Z,,,,,
+Backend Sprint,Issue,mana-soft/employee,1613,Anomalie : Annuaire > Contact d'urgence,https://github.com/mana-soft/employee/issues/1613,CLOSED,Done,Iteration - Lotus,2026-05-18,7,2026-05-21T05:43:51Z,2026-05-21T05:43:51Z,2026-05-22T12:53:04Z,,,,
 Backend Sprint,Issue,mana-soft/assistant,194,Architecture AWS Bedrock,https://github.com/mana-soft/assistant/issues/194,OPEN,Done,Iteration - Lotus,2026-05-18,7,2026-05-21T06:05:50Z,2026-05-21T06:05:50Z,,,,,
 Backend Sprint,Issue,mana-soft/assistant,193,MaIA sur AWS Bedrock,https://github.com/mana-soft/assistant/issues/193,OPEN,In Progress,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/assistant,196,Spécifications Symfony/React,https://github.com/mana-soft/assistant/issues/196,OPEN,Backlog,,,,,,,,,,
