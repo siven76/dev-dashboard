@@ -737,3 +737,4 @@ Backend Sprint,Issue,mana-soft/assistant,196,Spécifications Symfony/React,https
 Backend Sprint,Issue,mana-soft/assistant,195,Spécifications de la base de connaissances,https://github.com/mana-soft/assistant/issues/195,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/assistant,197,Spécifications de la génération de fichiers,https://github.com/mana-soft/assistant/issues/197,OPEN,Backlog,,,,,,,,,,
 Backend Sprint,Issue,mana-soft/planning,635,Anomalie : Affichage suivant l'écran,https://github.com/mana-soft/planning/issues/635,OPEN,Backlog,Iteration - Lotus,2026-05-18,7,2026-05-22T06:48:51Z,2026-05-22T06:48:51Z,,,,,
+Backend Sprint,Issue,mana-soft/settings,298,Les factures ManaTime ne s’affichent plus dans les paramètres de l’organisation,https://github.com/mana-soft/settings/issues/298,OPEN,Backlog,Iteration - Olivier,2026-06-08,7,2026-05-26T08:17:31Z,2026-05-26T08:17:31Z,,,,Estimate,8
