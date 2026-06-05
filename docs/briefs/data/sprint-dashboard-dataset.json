@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-05T12:11:52Z",
+    "generatedAt": "2026-06-05T15:58:19Z",
     "projectCsv": "docs/briefs/mana-soft-project-1-items.csv",
     "baselineCsv": "docs/briefs/data/sprint-baseline.csv",
     "eventsCsv": "docs/briefs/data/sprint-scope-events.csv",
@@ -570,23 +570,23 @@
       "endDate": "2026-06-07",
       "committed": 44.0,
       "delivered": 21.0,
-      "scopeAdded": 28.0,
+      "scopeAdded": 30.0,
       "scopeRemoved": 0.0,
       "reestimateDelta": 0.0,
-      "adjustedCommitted": 72.0,
-      "attainmentAdjusted": 29.17,
-      "churnPct": 63.64,
+      "adjustedCommitted": 74.0,
+      "attainmentAdjusted": 28.38,
+      "churnPct": 68.18,
       "unplannedBugPoints": 0.0,
-      "unplannedScopePoints": 28.0,
+      "unplannedScopePoints": 30.0,
       "plannedIssueCount": 4,
-      "unplannedIssueCount": 28,
+      "unplannedIssueCount": 30,
       "unknownScopePoints": 0,
       "framing": 1,
       "slicing": 1,
       "arbitration": 1,
       "prioritization": 1,
       "helping": 1,
-      "notes": "Iteration - N\u00e9nuphar | planned=4, unplanned=28, delivered_planned=1, unknown_scope_points=0"
+      "notes": "Iteration - N\u00e9nuphar | planned=4, unplanned=30, delivered_planned=1, unknown_scope_points=0"
     },
     {
       "id": "23",
